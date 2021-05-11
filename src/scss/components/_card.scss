@@ -3,7 +3,21 @@
   border-color: var(--col-primary-light);
   padding: 3vw;
 
+  .row {
+    width: 100%;
+    justify-content: center;
+  }
+
   h2 {
-    padding-bottom: 1.5vw;
+    padding: 1.5vw 0;
+  }
+
+  p {
+    padding: 1vw 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 756px;
   }
 }

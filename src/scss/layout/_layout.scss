@@ -44,6 +44,10 @@ body {
   border-bottom: 3px solid;
   width: 100%;
   max-width: 145px;
+
+  &.left-0 {
+    margin-left: 0;
+  }
 }
 
 .container .col-4 {
