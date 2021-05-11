@@ -1,0 +1,33 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/type-scale' as *;
+@use '../abstracts/mixins' as *;
+
+:root {
+  @each $color, $tints in $colors {
+    @each $tint, $value in $tints {
+      --col-#{$color}-#{$tint}: #{$value};
+    }
+  }
+
+  @each $screen-size, $font-size in $type-scale {
+    @if $screen-size == sm {
+      @each $size, $value in $font-size {
+        --font-#{$size}: #{$value};
+        --small-subhead-#{$size}: #{$value + 0.125rem};
+        --subhead-#{$size}: #{$value + 0.375rem};
+        --headline-#{$size}: #{$value + 0.6875rem};
+        --jumbo-font-#{$size}: #{$value + 2.375rem};
+      }
+    } @else {
+      @include mq(md) {
+        @each $size, $value in $font-size {
+          --font-#{$size}: #{$value};
+          --small-subhead-#{$size}: #{$value + 0.125rem};
+          --subhead-#{$size}: #{$value + 0.375rem};
+          --headline-#{$size}: #{$value + 0.875rem};
+          --jumbo-font-#{$size}: #{$value + 2.375rem};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '../base/root' as *;
+@use '../base/typography' as *;
+@use '../base/display' as *;
+@use '../abstracts/utilities' as *;
+@use '../abstracts/mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.5;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: $barlow;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  @include mq(sm) {
+    width: 90%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.border {
+  margin: 3vh;
+  border-bottom: 3px solid;
+  width: 100%;
+  max-width: 145px;
+}
+
+.container .col-4 {
+  padding: 1vw;
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+
+.services-container {
+  padding-top: 4vw;
+  padding-right: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 3vw;
+
+  .border {
+    margin-bottom: 6vh;
+  }
+
+  div button {
+    margin: 3.5vh 0;
+  }
+
+  @include mq(lg) {
+    .card {
+      min-height: 260px;
+    }
+  }
+}
+
+.services-text {
+  h1 {
+    padding: 2vh;
+  }
+
+  p {
+    padding-top: 1vh;
+  }
+}

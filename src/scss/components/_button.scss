@@ -1,0 +1,48 @@
+.btn {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  min-height: 60px;
+  min-width: 120px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  font-family: 'Questrial', sans-serif;
+  transition: color 0.2s linear, background 0.2s linear,
+    border-color 0.2s linear, text-shadow 0.2s linear;
+
+  &-light,
+  &-light:focus,
+  &-light:active {
+    @extend .btn;
+    border-color: var(--col-primary-light);
+    background: var(--col-primary-light);
+    color: var(--col-secondary-dark);
+  }
+
+  &-light:hover {
+    @extend .btn;
+    background-color: var(--col-secondary-light-brown);
+    border-color: var(--col-secondary-light-brown);
+    color: var(--col-secondary-dark);
+  }
+
+  &-dark,
+  &-dark:focus,
+  &-dark:active {
+    @extend .btn;
+    border-color: var(--col-secondary-dark);
+    background: var(--col-secondary-dark);
+    color: var(--col-secondary-light);
+  }
+
+  &-dark:hover {
+    @extend .btn;
+    background-color: var(--col-secondary-med-brown);
+    border-color: var(--col-secondary-med-brown);
+    color: var(--col-secondary-light);
+  }
+}
