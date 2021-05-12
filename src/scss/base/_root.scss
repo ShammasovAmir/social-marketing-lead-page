@@ -18,7 +18,7 @@
         --headline-#{$size}: #{$value + 0.6875rem};
         --jumbo-font-#{$size}: #{$value + 2.375rem};
       }
-    } @else {
+    } @else if $screen-size == md {
       @include mq(md) {
         @each $size, $value in $font-size {
           --font-#{$size}: #{$value};
@@ -26,6 +26,26 @@
           --subhead-#{$size}: #{$value + 0.375rem};
           --headline-#{$size}: #{$value + 0.875rem};
           --jumbo-font-#{$size}: #{$value + 2.375rem};
+        }
+      }
+    } @else if $screen-size == lg {
+      @include mq(lg) {
+        @each $size, $value in $font-size {
+          --font-#{$size}: #{$value};
+          --small-subhead-#{$size}: #{$value + 0.125rem * 1.25};
+          --subhead-#{$size}: #{$value + 0.375rem * 1.25};
+          --headline-#{$size}: #{$value + 0.875rem * 1.25};
+          --jumbo-font-#{$size}: #{$value + 2.375rem * 1.25};
+        }
+      }
+    } @else if $screen-size == xl {
+      @include mq(xl) {
+        @each $size, $value in $font-size {
+          --font-#{$size}: #{$value};
+          --small-subhead-#{$size}: #{$value + 0.125rem * 1.5};
+          --subhead-#{$size}: #{$value + 0.375rem * 1.5};
+          --headline-#{$size}: #{$value + 0.875rem * 1.5};
+          --jumbo-font-#{$size}: #{$value + 2.375rem * 1.5};
         }
       }
     }

@@ -1,0 +1,46 @@
+footer {
+  padding-top: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 1vw;
+
+  .row {
+    margin-top: 2vw;
+  }
+
+  a {
+    color: var(--color-primary-light);
+  }
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    background-color: var(--col-secondary-dark);
+    content: 'rgb(15, 12, 9)';
+
+    &:hover {
+      background-color: var(--col-secondary-med-brown);
+      color: var(--col-secondary-light);
+    }
+  }
+
+  .logo-wrapper {
+    margin: 4vw 0;
+    margin-bottom: 2vw;
+  }
+
+  img {
+    width: 100%;
+    max-width: 120px;
+    object-fit: contain;
+  }
+}

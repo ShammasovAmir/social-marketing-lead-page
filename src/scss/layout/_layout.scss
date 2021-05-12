@@ -30,7 +30,7 @@ body {
   width: 100%;
   margin: 0 auto;
   @include mq(sm) {
-    width: 90%;
+    width: (100% / 12 * 10);
   }
 }
 
