@@ -9,6 +9,11 @@
       content="Ga-la is a company that will take care of your social media presence. Get your first social media audit for free!"
     />
     <meta name="keywords" content="Ga-la, leadpages.com template clone" />
+    <link
+      rel="shortcut icon"
+      href="../src/assets/ga-la-logo-2.png"
+      type="image/png"
+    />
     <title>Get a free social media audit.</title>
     <link
       rel="preconnect"
@@ -529,21 +534,25 @@
         <div class="flex justify-center">
           <div class="border bg-primary-dark"></div>
         </div>
-        <form class="flex-column font-scale-4">
+        <form class="flex-column font-scale-4" method="POST">
           <span class="hidden">Email: </span>
           <input
-            type="email"
+            id="email"
+            type="text"
             name="email"
             placeholder="Email"
             class="form-input"
           />
+          <p class="error-message" id="email-error"></p>
           <span class="hidden">Comment: </span>
           <textarea
+            id="comment"
             name="comment"
             placeholder="Comment"
             class="form-input"
             rows="4"
           ></textarea>
+          <p class="error-message" id="comment-error"></p>
           <button
             type="submit"
             class="btn-dark font-scale-6 line-height-scale-10 text-uppercase"
