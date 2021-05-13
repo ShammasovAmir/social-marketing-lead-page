@@ -1,0 +1,90 @@
+@use '../abstracts/mixins' as *;
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(black, 0.5);
+  z-index: 5;
+  transition: opacity 0.15s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  position: relative;
+  padding: 4vw;
+  max-width: 100% / 12 * 10;
+  transform: translateY(25%);
+  transition: 300ms ease-in-out;
+
+  &-active {
+    transform: translateY(0);
+  }
+
+  p {
+    margin: 1.5vw 0;
+  }
+
+  form {
+    margin-top: 1.5vw;
+  }
+
+  .form-input {
+    font-size: inherit;
+    color: hsl(243.8, 100%, 6.3%);
+    padding: 0.5em;
+    border: 1px solid hsl(0, 0%, 80%);
+    margin-bottom: 1vw;
+  }
+
+  .form-input:focus {
+    border: 1px solid hsl(0, 0%, 80%);
+    box-shadow: hsl(0, 0%, 80%) 0 0 1.5px 1px;
+    outline: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.close-btn {
+  z-index: 1;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 50%;
+  padding: 10px;
+  background: hsl(219, 26%, 89%);
+  width: 32px;
+  height: 32px;
+  fill: hsl(0, 0%, 60%);
+  transition: fill 0.2s ease;
+
+  &:hover {
+    fill: var(--col-primary-dark-grayish);
+  }
+}
+
+@include mq(sm) {
+  .close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+}
